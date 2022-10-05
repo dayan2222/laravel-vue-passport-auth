@@ -5,6 +5,8 @@
                 <div class="navbar-nav" v-if="loggedUser">
                     <h5>Dashboard</h5>
                     <a href="javascript:void(0)" @click="logout()" class="nav-item nav-link ml-3">Logout</a>
+                    <router-link to="/products">All Products</router-link>
+
                 </div>
                 <div v-else>
                     <router-link to="/login">Login</router-link>

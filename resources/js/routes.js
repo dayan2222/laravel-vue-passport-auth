@@ -6,6 +6,10 @@ Vue.use(VueRouter);
 import Login from './components/login.vue';
 import Register from './components/register.vue';
 import Dashboard from './components/dashboard.vue';
+import Products from './components/products.vue';
+import CreateProduct from './components/CreateProduct.vue';
+import EditProduct from './components/EditProduct.vue';
+
 
 const routes = [
     {
@@ -25,7 +29,33 @@ const routes = [
         meta: {
             requiresAuth: true
         }
+    },
+    {
+        path: '/products',
+        component: Products,
+        name: "Products",
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/create',
+        component: CreateProduct,
+        name : "create",
+        meta:{
+            requiresAuth: true
+        }
     }
+    ,
+    {
+        path: '/edit/id',
+        component: EditProduct,
+        name: 'edit',
+        meta: {
+            requiresAuth: true
+        }
+    }
+
 ];
 
  const router = new VueRouter({
